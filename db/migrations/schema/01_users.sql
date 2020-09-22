@@ -1,5 +1,5 @@
 -- Drop and recreate Users table (Example)
-CREATE DATABASE midterm;
+CREATE DATABASE midterm OWNER labber;
 
 DROP TABLE IF EXISTS users CASCADE;
 

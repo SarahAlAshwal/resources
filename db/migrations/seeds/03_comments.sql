@@ -16,9 +16,9 @@ INSERT INTO comments  (user_id, resource_id, content
 (1,8,'yes'),
 (2,8,'morning coffee '),
 (1,8,'is the best'),
-(1,7,'this same one i add to my resoursces'),
-(3,7,'which course you are intrested in ?'),
-(1,7,' full stack develpment '),
-(3,7,'oh i see !'),
-(1,7,' and u ?'),
-(3,7,'i am intersted in business');
+(1,6,'this same one i add to my resoursces'),
+(3,6,'which course you are intrested in ?'),
+(1,6,' full stack develpment '),
+(3,6,'oh i see !'),
+(1,6,' and u ?'),
+(3,6,'i am intersted in business');
