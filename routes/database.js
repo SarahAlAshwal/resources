@@ -1,10 +1,10 @@
-require('dotevn').config();
+//require('dotevn').config();
 const { Pool } = require('pg');
 /*const pool = new Pool({
-  user: labber,
-  password: labber,
-  host: localhost,
-  database: midterm
+  user: "labber",
+  password: "labber",
+  host: "localhost",
+  database: "midterm"
 });
 */
 const pool = new Pool({
@@ -115,7 +115,7 @@ exports.addResource = addResource;
  */
 const getAllComments = function(resource_id) {
   return pool.query(`
-    SSELECT comments.content, comments.user_id
+    SELECT comments.content, comments.user_id
     FROM comments
     JOIN resources ON resources.id = resource_id
     JOIN users ON comments.user_id = users.id
@@ -124,7 +124,7 @@ const getAllComments = function(resource_id) {
   `,[resource_id]).then(res => res.rows);
 }
 exports.getAllComments = getAllComments;
-console.log(getAllComments(6));
+
 /**
  * Add new Comment for a single user.
  * @param {{resource_id: string,user_id: string, content: string}} resources  The id of the resources and the user who add the comment .
