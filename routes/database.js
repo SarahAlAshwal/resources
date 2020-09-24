@@ -1,12 +1,12 @@
 require('dotevn').config();
 const { Pool } = require('pg');
-const pool = new Pool({
+/*const pool = new Pool({
   user: labber,
   password: labber,
   host: localhost,
   database: midterm
 });
-/*
+*/
 const pool = new Pool({
   user: process.env.DB_USER,
   password: process.env.DB_PASS,
