@@ -1,6 +1,12 @@
 require('dotevn').config();
 const { Pool } = require('pg');
-
+const pool = new Pool({
+  user: labber,
+  password: labber,
+  host: localhost,
+  database: midterm
+});
+/*
 const pool = new Pool({
   user: process.env.DB_USER,
   password: process.env.DB_PASS,
@@ -118,7 +124,7 @@ const getAllComments = function(resource_id) {
   `,[resource_id]).then(res => res.rows);
 }
 exports.getAllComments = getAllComments;
-
+console.log(getAllComments(6));
 /**
  * Add new Comment for a single user.
  * @param {{resource_id: string,user_id: string, content: string}} resources  The id of the resources and the user who add the comment .
